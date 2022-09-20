@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Codificacion de caracteres utilizada -->
+    <meta charset="utf-8">
+    <!-- Título de la página que aparecerá en la pestaña, al incluir en favoritos,... -->
+    <title>HTML </title>
+    <!-- Descripción (utilizada por ejemplo en los resultados de Google) -->
+    <meta name="description" content="Primera pagina de prueba">
+</head>
+
+<body>
+    <h1>Reserva de sociedad</h1>
+    <p>Rellenar el siguiente formulario para reservar la sociedad para un dia en concreto</p>
+    <form action="form.php" method="post">
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <br><br>
+            Eres socio?
+            <br><br>
+            <input type="radio" name="eres socio" id="si" value="s" checked>
+            <label for="si">Si, soy socio</label>
+            <input type="radio" name="no eres socio" id="no" value="n">
+            <label for="no">No soy socio</label>
+            <br><br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <br><br>
+            <label for="contrasenya">Contraseña</label>
+            <input type="text" name="contrasenya" id="contrasenya">
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de la reserva</legend>
+            <label for="Edad">Edad</label>
+            <select id="edad" name="edad">
+                <optgroup label="edad">
+                    <option>Menor de 18</option>
+                    <option>Mayor de 18</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <label for="hora">Selecciona la fecha y hora de reserva:</label>
+            <br><br>
+            <input type="datetime-local" id="hora" name="hora">
+            <br><br>
+            <textarea name="Comentarios" rows="5" cols="30">Comentarios</textarea>
+        </fieldset>
+        <br>
+        <input type="checkbox" id="condiciones" name="condiciones">
+        <label for="condiciones">Acepto las condiciones</label>
+        <br><br>
+        <input class="favorite styled" type="button" value="ENVIAR">
+    </form>
+</body>
